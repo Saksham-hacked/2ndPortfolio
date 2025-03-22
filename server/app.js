@@ -17,7 +17,7 @@ const Blog = require('./models/blog.model.js');
 
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://reachsaksham.vercel.app",
     credentials: true, // Required for cookies
   }));
 
