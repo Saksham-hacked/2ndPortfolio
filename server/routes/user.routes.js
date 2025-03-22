@@ -61,7 +61,12 @@ router.post('/signin',async (req,res)=>{
    try{
 
        const token =await User.matchPasswordAndGenerateToken(email,password);
-        res.cookie('token',token);
+        // res.cookie('token',token);
+        res.cookie("token", token, {
+          httpOnly: true, // Prevents JavaScript access (security)
+          secure: true, // Ensures it works only over HTTPS
+          sameSite: "None", // Required for cross-origin requests
+        });
         // console.log("sent through backend",token);
        return res.json({token:token});
    } catch (error) {
