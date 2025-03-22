@@ -63,9 +63,11 @@ router.post('/signin',async (req,res)=>{
        const token =await User.matchPasswordAndGenerateToken(email,password);
         // res.cookie('token',token);
         res.cookie("token", token, {
-          httpOnly: true, // Prevents JavaScript access (security)
-          secure: true, // Ensures it works only over HTTPS
+          httpOnly: true,  // Prevents JS access
+          secure: true,    // Ensures it's sent only over HTTPS (important for production)
           sameSite: "None", // Required for cross-origin requests
+          path: "/",       // Ensure the cookie is set for all routes
+          domain: "twondportfolio.onrender.com" // Explicitly set the domain
         });
         // console.log("sent through backend",token);
        return res.json({token:token});
