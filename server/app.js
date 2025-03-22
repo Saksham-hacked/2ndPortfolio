@@ -90,7 +90,7 @@ const PORT = process.env.PORT || 3000;
 // ✅ Allow all origins (temporary for development)
 app.use(
   cors({
-    origin: "*", // 🚨 Change to specific origins in production!
+    origin:"https://reachsaksham.vercel.app", // 🚨 Change to specific origins in production!
     credentials: true,
   })
 );
