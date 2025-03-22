@@ -16,7 +16,7 @@ const BlogSection: React.FC = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("https://twondportfolio.onrender/");
+        const response = await fetch("https://twondportfolio.onrender.com/");
         const data = await response.json();
         console.log("Fetched Blogs:", data);
         setAllBlogs(data);

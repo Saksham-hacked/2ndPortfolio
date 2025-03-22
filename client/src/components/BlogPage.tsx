@@ -22,7 +22,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`https://twondportfolio.onrender/blog/${id}`);
+        const response = await fetch(`https://twondportfolio.onrender.com/blog/${id}`);
         if (!response.ok) {
           throw new Error("Blog not found");
         }
@@ -62,7 +62,7 @@ const BlogPage = () => {
   if (!blog) return <p className="text-center text-gray-400">No blog found</p>;
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[url(../public/bgImages/darkbg.jpg)] bg-no-repeat bg-blend-overlay bg-cover bg-center bg-black/70 w-screen absolute left-0">
+    <div className="min-h-screen flex justify-center items-center bg-[url(/bgImages/darkbg.jpg)] bg-no-repeat bg-blend-overlay bg-cover bg-center bg-black/70 w-screen absolute left-0">
       <motion.div
         className="max-w-3xl w-full bg-gray-950 bg-transparent backdrop-blur-md text-white rounded-lg shadow-2xl p-6 md:p-10"
         initial={{ opacity: 0, y: 20 }}
