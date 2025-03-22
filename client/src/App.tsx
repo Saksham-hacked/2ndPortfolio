@@ -20,7 +20,7 @@ const App = () => {
   
 
   return (
-    <div className="w-full h-full  bg-[url(./public/bgImages/darkbg.jpg)]  bg-blend-overlay bg-black/70 bg-cover bg-no-repeat scroll-smooth ">
+    <div className="w-full h-full  bg-[url(/bgImages/darkbg.jpg)]  bg-blend-overlay bg-black/70 bg-cover bg-no-repeat scroll-smooth ">
       <div className="container max-w-screen-xl mx-auto flex-col  items-center  ">
         <Routes>
           <Route

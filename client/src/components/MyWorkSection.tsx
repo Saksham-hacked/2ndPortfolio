@@ -34,19 +34,19 @@ const skills = [
 const projects = [
   {
     title: "Portfolio Website",
-    image: "../public/projectimages/portfolioWebsiteImage.png",
+    image: "projectimages/portfolioWebsiteImage.png",
     description: "A personal portfolio website showcasing my projects.",
     link: "/",
   },
   {
     title: " TimetableModule of Xceed.nitj ",
-    image: "../public/projectimages/xceedImage.png",
+    image: "projectimages/xceedImage.png",
     description: "Contibuted to timetable module of xceed.nitj. An institute level Project",
     link: "https://xceed.nitj.ac.in/timetable",
   },
   {
     title: "Blog Website(Desktop)",
-    image: "../public/projectimages/blogApp.png",
+    image: "/projectimages/blogApp.png",
     description: "An online blog website where users can read and write blogs.User can add comments also.",
     link: "https://blog-app-5t6y.onrender.com",
   },

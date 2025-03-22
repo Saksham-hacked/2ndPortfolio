@@ -20,7 +20,7 @@ export default function ImageRevealEffect() {
     >
       {/* High-Resolution Image */}
       <img
-        src="../public/myImages/nonpixcelatedNoBg.png"
+        src="/myImages/nonpixcelatedNoBg.png"
         alt="High Res"
         className="w-full h-full object-cover"
       />
@@ -29,7 +29,7 @@ export default function ImageRevealEffect() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(../public/myImages/colouredMinecraftnoBg.png)`,
+          backgroundImage: `url(/myImages/colouredMinecraftnoBg.png)`,
         //   maskImage: `radial-gradient(circle 500px at ${maskPosition.x}px ${maskPosition.y}px, transparent 30%, black 90%)`,
           maskImage: `radial-gradient( circle at ${maskPosition.x}px ${maskPosition.y}px, transparent 30%, black 90%)`,
 
