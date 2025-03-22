@@ -51,9 +51,9 @@ cloudinary.config({
   
 
 
-router.get('/add-new',(req,res)=>{
-    return res.render('addBlog');
-})
+// router.get('/add-new',(req,res)=>{
+//     return res.render('addBlog');
+// })
 
 router.get('/:id', async (req,res)=>{
     const blog = await Blog.findById(req.params.id).populate("createdBy");

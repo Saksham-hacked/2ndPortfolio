@@ -29,9 +29,10 @@ const storage = new CloudinaryStorage({
   
   const upload = multer({ storage: storage });
 
-router.get('/signin',(req,res)=>{
-    return res.render('signin');
-})
+// router.get('/signin',(req,res)=>{
+//   res.json({ message: "Some response data" });  // ✅ Correct way
+
+// })
 
 // router.get('/signup',(req,res)=>{
 //    return res.render('signup');
@@ -101,10 +102,10 @@ router.post('/signin',async (req,res)=>{
 })
 
 
-router.get('/signout',(req,res)=>{
-    res.clearCookie('token');
-    return res.redirect('/');
-})
+// router.get('/signout',(req,res)=>{
+//     res.clearCookie('token');
+//     return res.redirect('/');
+// })
 
 
 
