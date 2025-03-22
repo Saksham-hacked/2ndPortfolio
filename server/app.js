@@ -16,10 +16,14 @@ const User = require('./models/user.model.js');
 const Blog = require('./models/blog.model.js');
 
 
-app.use(cors({
-    origin: "https://reachsaksham.vercel.app",
-    credentials: true, // Required for cookies
-  }));
+app.use(
+    cors({
+      origin: ["https://reachsaksham.vercel.app", "http://localhost:5173"], // Allow both production and local frontend
+      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+      credentials: true, // Required for cookies
+      allowedHeaders: "Content-Type,Authorization",
+    })
+  );
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("Connected to database");
