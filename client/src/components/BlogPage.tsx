@@ -22,7 +22,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/blog/${id}`);
+        const response = await fetch(`https://twondportfolio.onrender/blog/${id}`);
         if (!response.ok) {
           throw new Error("Blog not found");
         }

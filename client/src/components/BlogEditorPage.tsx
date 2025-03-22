@@ -486,7 +486,7 @@ const BlogEditor = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:3000/");
+      const response = await fetch("https://twondportfolio.onrender/");
       if (!response.ok) throw new Error("Failed to fetch blogs");
 
       const data = await response.json();
@@ -522,7 +522,7 @@ const BlogEditor = () => {
     formData.append("body", body);
 
     try {
-      const response = await fetch("http://localhost:3000/blogs", {
+      const response = await fetch("https://twondportfolio.onrender/blogs", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -548,7 +548,7 @@ const BlogEditor = () => {
     const token = Cookies.get("token");
 
     try {
-      const response = await fetch(`http://localhost:3000//blog/${blogId}`, {
+      const response = await fetch(`https://twondportfolio.onrende/blog/${blogId}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`,
