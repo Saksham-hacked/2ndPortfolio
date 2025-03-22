@@ -16,14 +16,13 @@ const User = require('./models/user.model.js');
 const Blog = require('./models/blog.model.js');
 
 
-app.use(
-    cors({
-      origin: ["https://reachsaksham.vercel.app", "http://localhost:5173"], // Allow both production and local frontend
-      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-      credentials: true, // Required for cookies
-      allowedHeaders: "Content-Type,Authorization",
-    })
-  );
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://reachsaksham.vercel.app");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    next();
+  });
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("Connected to database");
