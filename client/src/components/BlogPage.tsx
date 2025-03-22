@@ -23,12 +23,19 @@ const BlogPage = () => {
     const fetchBlog = async () => {
       try {
         const response = await fetch(`https://twondportfolio.onrender.com/blog/${id}`);
+        
+        console.log("API Response Status:", response.status);
+        
         if (!response.ok) {
           throw new Error("Blog not found");
         }
+        
         const data = await response.json();
-        setBlog(data.blog);
+        console.log("API Response Data:", data); // Log full API response
+        
+        setBlog(data.blog || data); // Adjust based on API structure
       } catch (err) {
+        console.error("Error fetching blog:", err);
         setError("Failed to load blog");
       } finally {
         setLoading(false);
