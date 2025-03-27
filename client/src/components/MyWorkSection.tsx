@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
           ))}
           <Button   className="px-6 py-6 col-span-4 text-lg border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white">
-            <a href="./resume.pdf" download>Download Resume</a>
+            <a href="./resumeNew(1).pdf" download>Download Resume</a>
 
           </Button>
         </div>
